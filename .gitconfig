@@ -1,0 +1,54 @@
+[user]
+	name = Sunmeet Singh
+  email = sunmeet@fb.com
+
+[github] 
+  user=sunmeetsingh
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = cyan
+[color "diff"]
+  meta = black bold
+  frag = blue
+  old = red
+  new = green
+[color "status"]
+  added = green
+  changed = blue
+  untracked = yellow
+
+[alias]
+  br = branch
+  cl = clone
+  ci = commit
+  cm = commit -a
+  co = checkout
+  dc = diff --cached
+  df = diff --color
+  dfst = diff --stat
+  fixup = !sh -c 'git commit --fixup=$1' -
+  ign = ls-files -o -i --exclude-standard
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr by %an)%Creset' --abbrev-commit --date=relative
+  msg = commit --allow-empty -m
+  new = checkout -b
+  nuke = reset --hard HEAD
+  pl = pull origin master
+  ps = push origin master
+  po = push origin gh-pages
+  ri = rebase --interactive --autosquash
+  sh = stash save
+  shap = !sh -c 'git stash apply stash@{$1}'
+  shdf = !sh -c 'git stash show -u stash@{$1}'
+  shls = stash list
+  st = status -s
+  stage = add
+  switch = checkout
+  unstage = reset HEAD
+[core]
+	excludesfile = svnroot/admin/gitexclude

@@ -2,4 +2,5 @@
 + .vimrc
 + .zshrc
 + .oh-my-zsh/
++ .gitconfig
 - /*
