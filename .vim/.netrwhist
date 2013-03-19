@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/ampersandy/.vim'
+let g:netrw_dirhist_2='/home/ampersandy/.vim/bundle'
+let g:netrw_dirhist_3='/home/ampersandy/.vim'
+let g:netrw_dirhist_4='/home/ampersandy/.vim/ftplugin'
+let g:netrw_dirhist_5='/home/ampersandy'
+let g:netrw_dirhist_6='/data/users/sunmeet/www-git'
+let g:netrw_dirhist_7='/data/users/sunmeet/www-git/flib'
+let g:netrw_dirhist_8='/data/users/sunmeet/www-git/flib/actionscript'
+let g:netrw_dirhist_9='/data/users/sunmeet/www-git/flib/actionscript/build'
