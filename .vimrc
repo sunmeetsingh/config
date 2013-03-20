@@ -1,20 +1,6 @@
-if match($LOG_NAME, 'error_log_sunmeet') == 0
-syn match tab display "\t"
-hi link tab Error
-source $ADMIN_SCRIPTS/master.vimrc
-set number
-source /mnt/vol/engshare/admin/scripts/quicli/quicli.vimrc
-source /mnt/vol/engshare/admin/scripts/quicli/sessions.vimrc
-source /mnt/vol/engshare/admin/scripts/quicli/tabs.vimrc
-endif
 
 " Setup Bundle Support {
 set rtp+=~/.vim/bundle/vundle
-" FB runtime
-if $ADMIN_SCRIPTS == ""
-  let $ADMIN_SCRIPTS = "/mnt/vol/engshare/admin/scripts"
-endif
-set rtp+=$ADMIN_SCRIPTS/vim
 call vundle#rc()
 
 " Bundles {
@@ -387,7 +373,20 @@ call vundle#rc()
 "
 "
 " Facebook Settings {
-"
+if match($LOG_NAME, 'error_log_sunmeet') == 0
+  syn match tab display "\t"
+  hi link tab Error
+  source $ADMIN_SCRIPTS/master.vimrc
+  source /mnt/vol/engshare/admin/scripts/quicli/quicli.vimrc
+  source /mnt/vol/engshare/admin/scripts/quicli/sessions.vimrc
+  source /mnt/vol/engshare/admin/scripts/quicli/tabs.vimrc
+  " FB runtime
+  if $ADMIN_SCRIPTS == ""
+    let $ADMIN_SCRIPTS = "/mnt/vol/engshare/admin/scripts"
+  endif
+  set rtp+=$ADMIN_SCRIPTS/vim
+
+
 "   BigGrep Plugin {
       source /home/engshare/admin/scripts/vim/biggrep.vim
       " Comma+t to Tbgs Search
@@ -428,6 +427,7 @@ call vundle#rc()
     set completefunc=CompleteUsernames
 "   }
 
+endif
 
 " error log, hzhao's nemo
 " TODO: can we make these more specifically depend on the error file
