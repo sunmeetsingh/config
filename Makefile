@@ -7,6 +7,8 @@ all:
 	@echo "\n"
 
 install:
+	@git submodule update --init .oh-my-zsh
+	@git submodule update .oh-my-zsh
 	@rsync --verbose --recursive --exclude-from=rsync-include . ~/.
 
 update:
